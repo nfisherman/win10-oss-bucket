@@ -1,0 +1,79 @@
+{
+    "description": "CubePDF is a Windows virtual printer that allows you to convert to PDF when you need it from any application, including Web browsers, Microsoft Word, Excel, PowerPoint (PPT), bitmap files (PNG, JPEG, BMP), etc.",
+    "homepage": "https://cube-soft.jp/en/cubepdf/",
+    "license": "AGPL-3.0",
+    "notes": ".NET Framework 3.5 or later is required (4.7 or later is recommended)",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/cube-soft/cube.pdf/releases/download/8.5.4-net47/cubepdf-3.3.1-x64.exe",
+            "hash": "3b651981ce9c63d75e38a8b2ae50a9a0024301136be2e1fbfb0afc609787c97c",
+            "installer": {
+                "script": [
+                    "Get-ChildItem \"$dir\" '*,1*' -Recurse | Remove-Item -Force",
+                    "Get-ChildItem \"$dir\" '*,2*' -Recurse | ForEach-Object { Rename-Item $_.Fullname ($_.Name -Replace ',2') }"
+                ]
+            }
+        },
+        "32bit": {
+            "url": "https://github.com/cube-soft/cube.pdf/releases/download/8.5.4-net47/cubepdf-3.3.1.exe",
+            "hash": "4793bbc07be069b1016adf1b7aec523a5218bb91b0ab02340c9c4f4a687dd3be",
+            "installer": {
+                "script": [
+                    "Get-ChildItem \"$dir\" '*,1*' -Recurse | Remove-Item -Force",
+                    "Get-ChildItem \"$dir\" '*,2*' -Recurse | ForEach-Object { Rename-Item $_.Fullname ($_.Name -Replace ',2') }"
+                ]
+            }
+        },
+        "arm64": {
+            "url": "https://github.com/cube-soft/cube.pdf/releases/download/8.5.4-net47/cubepdf-3.3.1-arm64.exe",
+            "hash": "abdcac8ddad992ce9d2fce6f3ce232b1825104beb7d0b25fc3cfb3c1af187cd4",
+            "installer": {
+                "script": [
+                    "Get-ChildItem \"$dir\" '*,1*' -Recurse | Remove-Item -Force",
+                    "Get-ChildItem \"$dir\" '*,2*' -Recurse | ForEach-Object { Rename-Item $_.Fullname ($_.Name -Replace ',2') }"
+                ]
+            }
+        }
+    },
+    "pre_install": "",
+    "installer": {
+        "script": ""
+    },
+    "post_install": [
+        "",
+        ""
+    ],
+    "uninstaller": {
+        "script": ""
+    },
+    "bin": "",
+    "env_add_path": [
+        "",
+        ""
+    ],
+    "persist": [
+        "",
+        ""
+    ],
+    "checkver": {
+        "url": "",
+        "regex": ""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": ""
+            },
+            "32bit": {
+                "url": ""
+            },
+            "arm64": {
+                "url": ""
+            }
+        },
+        "hash": {
+            "url": "",
+            "regex": ""
+        }
+    }
+}
